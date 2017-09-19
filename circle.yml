@@ -1,0 +1,14 @@
+version: 1
+jobs:
+  build:
+    
+    working_directory: ~/circle-ci-test
+
+    docker:
+      - image: openjdk:8-jdk
+
+    steps:
+
+      - checkout
+      
+      - run: mvn clean package
