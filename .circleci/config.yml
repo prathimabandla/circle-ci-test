@@ -44,6 +44,7 @@ jobs:
           name: Deploy the data pipeline
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+             chmod 755 scripts/deploy.sh
              ENV=dev ./scripts/deploy.sh
             fi
           timeout: 1800
