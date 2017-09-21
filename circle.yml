@@ -5,31 +5,17 @@ machine:
     # Install Java
     #- curl -L -o ~/jdk1.8.0_144.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz
     #- tar -xvzf ~/jdk1.8.0_144.tar.gz -C ~/
-    - sudo apt-get install openjdk-8-jdk
+    #- sudo apt-get install openjdk-8-jdk
     #- update-alternatives --config java 
-    - export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
+    #- export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
     #- export JAVA_HOME=~/jdk1.8.0_144
     # Install Maven
-    - wget http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
-    - tar -zxvf apache-maven-3.5.0-bin.tar.gz
-    - export M2_HOME=~/apache-maven-3.5.0
+    #- wget http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+    #- tar -zxvf apache-maven-3.5.0-bin.tar.gz
+    #- export M2_HOME=~/apache-maven-3.5.0
     - java -version
     - mvn --version
-  environment:
-    PATH: "/usr/lib/jvm/jdk1.8.0/bin/:~/apache-maven-3.5.0:~/apache-maven-3.5.0/bin"
-
-dependencies:
-  cache_directories:
-    - ~/jdk1.8.0_144
-  pre:
-    # Install Java
-    #- curl -L -o ~/jdk1.8.0_144.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz
-    #- tar -xvzf ~/jdk1.8.0_144.tar.gz -C ~/
-    #- export JAVA_HOME=~/jdk1.8.0_144
-    # Install Maven
-    #- wget http://apache.cs.utah.edu/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-3.3.9-bin.tar.gz
-    #- tar -zxvf apache-maven-3.3.9-bin.tar.gz
-    #-  export M2_HOME=~/apache-maven-3.3.9
+    #- ls -ll /usr/lib/jvm/jdk1.8.0
 
 test:
   override:
