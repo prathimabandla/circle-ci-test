@@ -8,11 +8,11 @@ machine:
     - sudo apt-get install openjdk-8-jdk
     #- export JAVA_HOME=~/jdk1.8.0_144
     # Install Maven
-    - wget http://apache.cs.utah.edu/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-3.3.9-bin.tar.gz
-    - tar -zxvf apache-maven-3.3.9-bin.tar.gz
-    - export M2_HOME=~/apache-maven-3.3.9  
+    - wget http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
+    - tar -zxvf apache-maven-3.5.0-bin.tar.gz
+    - export M2_HOME=~/apache-maven-3.5.0  
   environment:
-    PATH: "~/apache-maven-3.3.9:~/apache-maven-3.3.9/bin"
+    PATH: "~/apache-maven-3.5.0:~/apache-maven-3.5.0/bin"
 
 dependencies:
   cache_directories:
