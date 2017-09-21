@@ -25,6 +25,7 @@ deployment:
   non_prod:
     branch: master
     commands:
+      - chmod 755 scripts/deploy.sh
       - ENV=dev ./scripts/deploy.sh:
           timeout: 1800
 
