@@ -6,15 +6,15 @@ machine:
     #- curl -L -o ~/jdk1.8.0_144.tar.gz http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz
     #- tar -xvzf ~/jdk1.8.0_144.tar.gz -C ~/
     - sudo apt-get install openjdk-8-jdk
-    - update-alternatives --config java 
-    #- export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.7.0.9.x86_64
+    #- update-alternatives --config java 
+    - export JAVA_HOME=/usr/lib/jvm/jdk1.8.0/bin/java
     #- export JAVA_HOME=~/jdk1.8.0_144
     # Install Maven
     - wget http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
     - tar -zxvf apache-maven-3.5.0-bin.tar.gz
     - export M2_HOME=~/apache-maven-3.5.0  
   environment:
-    PATH: "~/apache-maven-3.5.0:~/apache-maven-3.5.0/bin"
+    PATH: "/usr/lib/jvm/jdk1.8.0/bin/java/bin:~/apache-maven-3.5.0:~/apache-maven-3.5.0/bin"
 
 dependencies:
   cache_directories:
