@@ -7,7 +7,7 @@ machine:
     #- tar -xvzf ~/jdk1.8.0_144.tar.gz -C ~/
     - sudo apt-get install openjdk-8-jdk
     #- update-alternatives --config java 
-    - export JAVA_HOME=/usr/lib/jvm/jdk1.8.0/bin
+    - export JAVA_HOME=/usr/lib/jvm/jdk1.8.0
     #- export JAVA_HOME=~/jdk1.8.0_144
     # Install Maven
     - wget http://www.gtlib.gatech.edu/pub/apache/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz
